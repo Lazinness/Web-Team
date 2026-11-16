@@ -1,8 +1,33 @@
 /*
 @import шрифт
+
 */
+/* Озвальд */
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Oswald:wght@200..700&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+/* Інтер */
 
 :root {
     /*Кольори*/
-    --color-olive: #556B2;
+    --color-olive: #556B2F;
+    --dark-green: rgba(41, 45, 40, 1);
+    --mid-green: #A2A88E;
+    --light-green: #D7D4C9;
+    --light-contur: rgba(244, 242, 236, 1);
+
+    /*Розміри*/
+    --max-width: 1440px;
+    --header: 80px;
+    --footer: 336px;
+
+    /*Розміри шрифту*/
+    /*
+    88
+    56
+    18
+    16
+    14
+    12
+    */
+
+
 }
