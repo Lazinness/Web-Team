@@ -1,17 +1,15 @@
-/*
-@import шрифт
-
-*/
+/* ШРИФТИ */
 /* Озвальд */
 @import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Oswald:wght@200..700&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 /* Інтер */
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 :root {
     /*Кольори*/
     --color-olive: #556B2F;
     --dark-green: rgba(41, 45, 40, 1);
     --mid-green: #A2A88E;
-    --light-green: #D7D4C9;
+    --bleak-white: #D7D4C9;
     --light-contur: rgba(244, 242, 236, 1);
 
     /*Розміри*/

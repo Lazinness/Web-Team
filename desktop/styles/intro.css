@@ -1,0 +1,55 @@
+
+.intro {
+    background-image: url('../images/intro.png'); 
+        background-repeat:no-repeat;
+        background-size:cover;
+    font-family: 'Inter';
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* vertical spacing */
+    align-items: left;          /* horizontal alignment */
+    gap: 24px;
+    
+    height: 100%;
+    width: 100%;
+    position: relative;
+
+}
+
+/* Контент */
+.padding  {
+        padding: 10%;
+            position: relative;
+display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* vertical spacing */
+    align-items: left;          /* horizontal alignment */
+    gap: 24px;
+        z-index: 1;
+
+}
+.padding button {
+    max-width: 216px;
+    background-color: var(--color-olive);
+    padding: 5px;
+}
+.padding h1 {
+    font-family: 'Oswald';
+    font-size: 88px;
+    max-width: 920px;
+}
+/* Градієнт */
+.gradient {
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to right, rgba(32, 38, 31, 0.902), rgba(32, 38, 31, 0.251));
+    position: absolute;
+    z-index: 0;
+}
+
+
+/*
+24 між
+80 під над збоку
+*/
