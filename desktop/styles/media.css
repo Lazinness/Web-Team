@@ -1,0 +1,93 @@
+/* Планшет */
+@media (max-width: 1024px) {
+    .footer-top {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+}
+
+/* Мобільне меню + одна колонка */
+@media (max-width: 860px) {
+    .nav-toggle {
+        display: block;
+    }
+
+    .top-flex nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: 10;
+        padding: 8px var(--gutter) 24px;
+        background: var(--dark-green);
+        border-top: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .top-flex.is-open nav {
+        display: block;
+    }
+
+    .top-flex nav ul {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+    }
+
+    .top-flex nav a {
+        padding: 14px 0;
+        font-size: 16px;
+    }
+
+    .top-flex nav button {
+        width: 100%;
+        margin: 12px 0 0;
+        padding: 14px;
+    }
+
+    .split {
+        grid-template-columns: 1fr;
+    }
+
+    .split figure {
+        order: -1;
+    }
+}
+
+/* Телефон */
+@media (max-width: 560px) {
+    .logo-text {
+        font-size: 16px;
+    }
+
+    .stat-list {
+        width: 100%;
+        justify-content: space-between;
+        gap: 16px;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .title-row>p:last-child {
+        max-width: none;
+    }
+
+    .footer-top {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+    }
+
+    .hero-content .btn {
+        display: block;
+        text-align: center;
+    }
+}

@@ -1,14 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../styles/main.css" rel="stylesheet" property="stylesheet" type="text/css">
-
-    <title>Uni</title>
+    <title>Студентський гуртожиток №1 - Київ</title>
+    <script src="../components/header.js" defer></script>
+    <script src="../components/footer.js" defer></script>
 </head>
 <body>
+    <site-header current="home"></site-header>
+
     <main>
+        <!--
         <div class="top-flex">
             <header class="head-flex">
                 <img src='../images/icon_top.svg'>
@@ -26,89 +30,179 @@
                 </ul>
             </nav>
         </div>
-        <section>
+        -->
+        
+        <section class="hero">
         <div class="intro">
-            <div class="padding">
-                <p>КИЇВ · СТУДЕНТСЬКИЙ ПРОСТІР</p>
+            <img src="../images/hero.png" alt="Фасад гуртожитку">
+            <div class="hero-content">
+                <p class="hero-kicker">КИЇВ · СТУДЕНТСЬКИЙ ПРОСТІР</p>
                 <h1>СТУДЕНТСЬКИЙ ГУРТОЖИТОК №1</h1>
-                <p>Більше, ніж місце проживання. Комфортний простір, де 
+                <p>
+                    Більше, ніж місце проживання. Комфортний простір, де 
                     починається ваше самостійне студентське життя.
                 </p>
-                <button>Дізнатися про заселення</button>
-                <p>Навчайтеся. Відпочивайте. Будьте вдома.</p>
+                <button class="btn" href="residents.html">Дізнатися про заселення</button>
+                <small>Навчайтеся. Відпочивайте. Будьте вдома.</small>
             </div>
             <div class="gradient"></div>
         </div>
         </section>
+        <!--Статистика-->
+        <section class="stats" aria-label="Гуртожиток у цифрах">
         <div class="info-flex">
-            <h2>5</h2>
-            <h2>250</h2>
-            <h2>96</h2>
-            <p>поверхів</p>
-            <p>місць</p>
-            <p>кімнат</p>
-            <h3>ПРОСТІР ДЛЯ ВАШОГО СТАРТУ</h3>
-        </div>
-
-        <div class="section1">
-            <div class="section1-left">
-                <p>01 / ПРО НАС</p>
+            <dl class="stat-list">
+                <div class="stat">
+                    <dt>поверхів</dt>
+                    <dd>5</dd>
+                </div>
+                <div class="stat">
+                    <dt>місць</dt>
+                    <dd>250</dd>
+                </div>
+                <div class="stat">
+                    <dt>кімнат</dt>
+                    <dd>96</dd>
+                </div>
+            </dl>
+            <p class="stats-slogan">Простір для вашого старту</p>
+        </div>  
+        </section>
+        
+        <!--01 Про нас -->
+        <section class="split section">
+            <div>
+                <p class="section-label">01 / ПРО НАС</p>
                 <h2>ВАШ ДІМ НА ЧАС НАВЧАННЯ</h2>
                 <p>Гуртожиток №1 — це п’ять поверхів студентського життя у Києві. Тут є все 
                     для зручного побуту: затишні кімнати, спільні кухні, пральня та простори 
                     для навчання й відпочинку.
                 </p>
                 <p>
-                   Ми дбаємо про безпечне середовище та повагу до кожного. Зрозумілі 
-                   правила й підтримка адміністрації допомагають почуватися впевнено з 
-                   першого дня. 
+                    Ми дбаємо про безпечне середовище та повагу до кожного. Зрозумілі 
+                    правила й підтримка адміністрації допомагають почуватися впевнено з 
+                    першого дня. 
                 </p>
-                <button>Інформація для мешканців</button>
+                <button class="btn-outline" href="residents.html">Інформація для мешканців</button>
             </div>
-            <div class="section1-right">
-                <img src="images/room_photo.png">
-                <p>Кімната для двох мешканців</p>
-                <p>ГУРТОЖИТОК №1</p>
-            </div>
-        </div>
+            <figure>
+                <img src="../images/room_photo.png" alt="Кімната для двох мешканців">
+                <figcaption>
+                    <span>Кімната для двох мешканців</span>
+                    <b>ГУРТОЖИТОК №1</b>
+                </figcaption>
+            </figure>
+        </section>
 
-        <div class="section2">
-            <p>02 / УСЕ ПОРУЧ</p>
+        <!--02 Зручності-->
+        <section class="section muted">
+            <p class="section-label">02 / УСЕ ПОРУЧ</p>
             <h2>КОМФОРТ У КОЖНІЙ ДЕТАЛІ</h2>
-            <div class="sec2-photos">
-                <div class="sec2-element">
+            <ul class="sec2-photos">
+                <li class="sec2-element">
                     <img src="../images/sec2_1.png">
-                    <h4>Wi-Fi</h4>
+                    <h3>Wi-Fi</h3>
                     <p>Інтернет для навчання та щоденних справ.</p>
-                </div>
-                <div class="sec2-element">
+                </li>
+                <li class="sec2-element">
                     <img src="../images/sec2_2.png">
-                    <h4>Сучасна кухня</h4>
+                    <h3>Сучасна кухня</h3>
                     <p>Обладнаний простір для ваших улюблених страв.</p>
-                </div>
-                <div class="sec2-element">
+                </li>
+                <li class="sec2-element">
                     <img src="../images/sec2_3.png">
-                    <h4>Пральня</h4>
+                    <h3>Пральня</h3>
                     <p>Пральні машини просто у гуртожитку.</p>
-                </div>
-                <div class="sec2-element">
+                </li>
+                <li class="sec2-element">
                     <img src="../images/sec2_4.png">
-                    <h4>Кімнати відпочинку</h4>
+                    <h3>Кімнати відпочинку</h3>
                     <p>Місце для спілкування та перерви між парами.</p>
-                </div>
-                <div class="sec2-element">
+                </li>
+                <li class="sec2-element">
                     <img src="../images/sec2_5.png">
-                    <h4>Безпека</h4>
+                    <h3>Безпека</h3>
                     <p>Контроль доступу та черговий на вході.</p>
+                </li>
+            </ul>
+        </section>
+
+        <!--03 Галерея-->
+        <section class="section">
+            <div class="title-row">
+                <div>
+                    <p>03 / ГАЛЕРЕЯ</p>
+                    <h2>ПОГЛЯНЬТЕ ВСЕРЕДИНУ</h2>
                 </div>
+                <p>Прості, світлі простори для вашого щоденного життя.</p>
             </div>
-        </div>
+            <div class="gallery">
+                <figure class="gallery-item gallery-item--wide">
+                    <img src="../images/gallery_1.png" alt="Фасад гуртожитку та подвір’я">
+                    <figcaption>Фасад і подвір’я</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="../images/gallery_2.png" alt="Житлова кімната">
+                    <figcaption>Житлові кімнати</figcaption>
+                </figure>
+                <figure class="gallery-item gallery-item--wide">
+                    <img src="../images/gallery_3.png" alt="Спільна кухня з плитою та дерев’яним столом">
+                    <figcaption>Спільна кухня</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="../images/gallery_4.png" alt="Простір відпочинку з диванами та рослинами">
+                    <figcaption>Простір відпочинку</figcaption>
+                </figure>
+            </div>
+        </section>
 
-        <div class="section3">
+        <!--Відео-->
+        <section class="video-banner">
+            <img src="../images/video_bg.png">
+            <div class="video-content">
+                <small>ГУРТОЖИТОК БЕЗ ФІЛЬТРІВ</small>
+                <button type="button" class="play" aria-label="Дивитися відеоекскурсію">▷</button>
+                <h2>Ваш майбутній дім — зблизька</h2>
+                <p>Відеоекскурсія · 02:35</p>
+            </div>
+        </section>
 
-        </div>
-
-        
+        <!--04 Новини-->
+        <section class="section">
+            <p class="section-label">04 / Актуальне</p>
+            <h2>Новини вашого дому</h2>
+            <div class="news">
+                <article class="news-card">
+                    <time datetime="2026-10-08">08 жовтня 2026</time>
+                    <h3>Підготовка до опалювального сезону</h3>
+                    <p>
+                        12 жовтня з 10:00 до 14:00 перевірятимуть систему опалення.
+                        Просимо забезпечити доступ до радіаторів.
+                    </p>
+                    <a class="news-tag" href="#">Оголошення</a>
+                </article>
+                <article class="news-card">
+                    <time datetime="2026-10-05">05 жовтня 2026</time>
+                    <h3>Оновлений графік роботи пральні</h3>
+                    <p>
+                        Пральня відкрита щодня з 08:00 до 22:00. Запис на зручний
+                        час — у чергового на першому поверсі.
+                    </p>
+                    <a class="news-tag" href="#">Побут</a>
+                </article>
+                <article class="news-card">
+                    <time datetime="2026-10-01">01 жовтня 2026</time>
+                    <h3>Перевірте дані у своєму кабінеті</h3>
+                    <p>
+                        Переконайтеся, що контактні дані актуальні. Довідки та квитанції
+                        доступні в розділі «Документи».
+                    </p>
+                    <a class="news-tag" href="#">Документи</a>
+                </article>
+            </div>
+        </section>
     </main>
+
+    <site-footer></site-footer>
 </body>
 </html>

@@ -1,77 +1,117 @@
-/*Весь заголовок*/
 .top-flex {
-    background-color: var(--dark-green);
-    height: var(--header);
-    color: white;
-
+    position: relative;
+    min-height: var(--header-h);
+    padding: 0 var(--gutter);
+    background: var(--dark-green);
+    color: #fff;
     display: flex;
+    align-items: center;
     justify-content: space-between;
-
+    gap: 24px;
 }
 
-
-/*Іконка та надпис*/
 .head-flex {
     display: flex;
     align-items: center;
-    width: 181px;
-    margin-left: 5%;
 }
-.head-flex img {
-    margin-right: 10%;
-    max-width: 40px;
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #fff;
 }
-.head-flex h3 {
-    max-width: 131px;
+
+.logo img {
+    width: 40px;
+    height: auto;
+}
+
+.logo-text {
+    font-family: var(--font-head);
     font-size: 18px;
-    font-family: 'Oswald';
-    
+    font-weight: 600;
+    line-height: 1.1;
+    text-transform: uppercase;
 }
-/*Навігація*/
+
 .top-flex nav {
-    float: right;
-    font-family: 'Inter';
     font-size: 14px;
-    margin-right: 5%;
 }
 
-.top-flex ul {
+.top-flex nav ul {
     display: flex;
-    width: 100%;
-    height: 100%;
-    justify-content: space-around; 
     align-items: center;
-    float: right;
-
+    gap: 8px;
+    margin: 0;
+    padding: 0;
 }
-.top-flex ul li {
-    display: inline-block;
-    text-align: center;
+
+.top-flex nav li {
     color: var(--bleak-white);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 10px;
-    
-    
 }
 
-.top-flex nav ul li a:hover {
-    color: white;
+.top-flex nav a {
+    display: block;
+    padding: 8px 12px;
+    text-underline-offset: 2px;
+}
+
+.top-flex nav a:hover,
+.top-flex nav a[aria-current="page"] {
+    color: #fff;
     text-decoration: underline;
-    font-weight: bolder;
-    text-decoration-color: var(--color-olive);
     text-decoration-thickness: 1.5px;
-}
-nav button {
-    color: white;
-    max-width: 80px;
-    padding: 20%;
-    background-color: var(--color-olive);
-}
-nav button:hover {
-        text-decoration: underline;
-    font-weight: bolder;
-
+    text-decoration-color: var(--color-olive);
 }
 
+.top-flex nav button {
+    margin-left: 8px;
+    padding: 10px 22px;
+    border: 0;
+    background: var(--color-olive);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.top-flex nav button:hover {
+    background: var(--mid-green);
+}
+
+/* бьоргеррр */
+.nav-toggle {
+    display: none;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 0;
+    background: none;
+    color: #fff;
+    position: relative;
+}
+
+.nav-toggle span,
+.nav-toggle span::before,
+.nav-toggle span::after {
+    content: "";
+    position: absolute;
+    left: 10px;
+    width: 24px;
+    height: 2px;
+    background: currentColor;
+}
+
+.nav-toggle span {
+    top: 21px;
+}
+
+.nav-toggle span::before {
+    top: -7px;
+    left: 0;
+}
+
+.nav-toggle span::after {
+    top: 7px;
+    left: 0;
+}

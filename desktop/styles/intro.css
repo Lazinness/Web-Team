@@ -1,55 +1,60 @@
 
 .intro {
-    background-image: url('../images/intro.png'); 
-        background-repeat:no-repeat;
-        background-size:cover;
-    font-family: 'Inter';
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* vertical spacing */
-    align-items: left;          /* horizontal alignment */
-    gap: 24px;
-    
-    height: 100%;
-    width: 100%;
     position: relative;
-
+    display: flex;
+    align-items: center;
+    min-height: clamp(460px, 50vw, 720px);
+    color: #fff;
+    overflow: hidden;
 }
-
-/* Контент */
-.padding  {
-        padding: 10%;
-            position: relative;
-display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* vertical spacing */
-    align-items: left;          /* horizontal alignment */
-    gap: 24px;
-        z-index: 1;
-
-}
-.padding button {
-    max-width: 216px;
-    background-color: var(--color-olive);
-    padding: 5px;
-}
-.padding h1 {
-    font-family: 'Oswald';
-    font-size: 88px;
-    max-width: 920px;
+.intro > img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
 }
 /* Градієнт */
 .gradient {
-    height: 100%;
-    width: 100%;
-    background-image: linear-gradient(to right, rgba(32, 38, 31, 0.902), rgba(32, 38, 31, 0.251));
     position: absolute;
-    z-index: 0;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(to right, rgba(32, 38, 31, 0.9), rgba(32, 38, 31, 0.25));
+}
+/* Контент */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    padding: 64px var(--gutter);
+}
+.hero-kicker {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0 0 16px;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
 }
 
-
-/*
-24 між
-80 під над збоку
-*/
+.hero-content h1 {
+    max-width: 920px;
+    margin-bottom: 24px;
+    font-size: clamp(40px, 7vw, 88px);
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 112%;
+}
+.hero-content p:not(.hero-kicker) {
+    max-width: 520px;
+    margin-bottom: 28px;
+    font-size: clamp(15px, 1.4vw, 18px);
+}
+.hero-content small {
+    display: block;
+    margin-top: 28px;
+    font-size: 12px;
+    color: var(--bleak-white);
+}

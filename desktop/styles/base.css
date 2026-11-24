@@ -1,31 +1,107 @@
-/* ШРИФТИ */
-/* Озвальд */
-@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Oswald:wght@200..700&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-/* Інтер */
-@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-
+/* блатний імпорт всіх шрифтів */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap');
 :root {
-    /*Кольори*/
+    
+    /*Кольори */
     --color-olive: #556B2F;
     --dark-green: rgba(41, 45, 40, 1);
-    --mid-green: #A2A88E;
-    --bleak-white: #D7D4C9;
-    --light-contur: rgba(244, 242, 236, 1);
+    --mid-green: #A2A88E;   /*sage*/
+    --bleak-white: #D7D4C9; /*line*/
+    --light-contur: rgba(244, 242, 236, 1); /*paper*/
+    --text: #62685c;
+    --pale: #e7ebdd;
+  
+    /*Шрифти */
+    --font-head: 'Oswald', 'Arial Narrow', sans-serif;
+    --font-body: 'Inter', Arial, sans-serif;
+    
+    /*Відступи */
+    --pad: clamp();
+    --gutter: max();
+    --section-y: clamp();
 
-    /*Розміри*/
-    --max-width: 1440px;
-    --header: 80px;
-    --footer: 336px;
-
-    /*Розміри шрифту*/
-    /*
-    88
-    56
-    18
-    16
-    14
-    12
-    */
+    --header-h: 64px;
+}
 
 
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+    margin: 0;
+    min-width: 320px;
+    background: var(--light-contur);
+    color: var(--dark-green);
+    font-family: var(--font-body);
+    font-size: 16px;
+}
+
+img { display: block; max-width: 100%; }
+
+button, input, textarea, select { font: inherit; }
+button { cursor: pointer; }
+
+p { line-height: 1.7; margin: 0 0 1em; }
+
+h1, h2, h3, h4 {
+    font-family: var(--font-head);
+    font-weight: 600;
+    line-height: 1.1;
+    margin: 0;
+}
+
+h2 {
+    font-size: clamp(32px, 4.5vw, 56px);
+    text-transform: uppercase;
+    margin-bottom: clamp(24px, 3vw, 40px);
+}
+
+a { color: inherit; }
+
+:focus-visible {
+    outline: 2px solid var(--color-olive);
+    outline-offset: 3px;
+}
+
+/* шоб кастомні елементи за замовчуванням не були inline */
+site-header, site-footer { display: block; }
+
+
+/*Загальні елементи */
+.btn,
+.btn-outline {
+    display: inline-block;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    line-height: 1.2;
+}
+
+.btn {
+    background: var(--color-olive);
+    color: #fff;
+}
+.btn:hover { background: #46591f; }
+
+.btn-outline {
+    border: 1px solid var(--bleak-white);
+    color: var(--dark-green);
+}
+.btn-outline:hover { border-color: var(--color-olive); }
+
+.section {
+    padding: var(--section-y) var(--gutter);
+}
+
+.muted { background: var(--bleak-white); }
+
+.section-label {
+    margin: 0 0 8px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-olive);
 }
