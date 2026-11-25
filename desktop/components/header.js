@@ -4,7 +4,7 @@ class SiteHeader extends HTMLElement {
   connectedCallback() {
     const current = this.getAttribute('current');
     const links = [
-      { id: 'home',      href: 'main.html',      text: 'Головна' },
+      { id: 'home',      href: 'index.html',      text: 'Головна' },
       { id: 'residents', href: 'residents.html', text: 'Мешканцям' },
       { id: 'cabinet',   href: 'personal.html',   text: 'Особистий кабінет' },
       { id: 'contacts',  href: 'contacts.html',  text: 'Контакти' },
@@ -17,7 +17,7 @@ class SiteHeader extends HTMLElement {
     this.innerHTML = `
     <div class="top-flex">
         <header class="head-flex">
-            <a class="logo" href="main.html">
+            <a class="logo" href="index.html">
                 <img src="../images/icon_top.svg" alt="">
                 <span class="logo-text">Студентський<br>гуртожиток №1</span>
             </a>
