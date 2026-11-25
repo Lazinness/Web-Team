@@ -13,7 +13,7 @@ class SiteFooter extends HTMLElement {
                 <ul>
                     <li><a href="index.html">Головна</a></li>
                     <li><a href="residents.html">Мешканцям</a></li>
-                    <li><a href="cabinet.html">Особистий кабінет</a></li>
+                    <li><a href="personal.html">Особистий кабінет</a></li>
                     <li><a href="contacts.html">Контакти</a></li>
                 </ul>
             </nav>
