@@ -11,7 +11,7 @@ class SiteFooter extends HTMLElement {
             <nav class="footer-col" aria-label="Навігація у футері">
                 <h4>Навігація</h4>
                 <ul>
-                    <li><a href="main.html">Головна</a></li>
+                    <li><a href="index.html">Головна</a></li>
                     <li><a href="residents.html">Мешканцям</a></li>
                     <li><a href="cabinet.html">Особистий кабінет</a></li>
                     <li><a href="contacts.html">Контакти</a></li>
