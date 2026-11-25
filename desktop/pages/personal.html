@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Особистий кабінет - Гуртожиток №1 </title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <script src="../components/header.js" defer></script>
+    <script src="../components/footer.js" defer></script>
+</head>
+<body>
+    <site-header current="cabinet"></site-header>
+    <div class="cabinet">
+        <!-- Бічне меню кабінету -->
+        <aside class="cab-side">
+            <p class="cab-side-title">Мій кабінет</p>
+            <nav aria-label="Розділи кабінету">
+                <ul>
+                    <li><a href="#overview" aria-current="true">Огляд</a></li>
+                    <li><a href="#payments">Платежі</a></li>
+                    <li><a href="#documents">Документи</a></li>
+                    <li><a href="#requests">Заявки</a></li>
+                    <li><a href="#notifications">Сповіщення</a></li>
+                    <li><a href="#settings">Налаштування</a></li>
+                </ul>
+            </nav>
+            <p class="cab-help">Потрібна допомога? Зверніться до адміністрації через розділ «Контакти».</p>
+            <a class="cab-logout" href="main.html">Вийти з кабінету</a>
+        </aside>
+        <main class="cab-main" id="overview">
+            <header class="cab-head">
+                <p class="section-label">Особистий кабінет</p>
+                <h1>Вітаємо, Маріє!</h1>
+                <time datetime="2026-10-08">08 жовтня 2026</time>
+            </header>
+
+
+            <!-- Студент + проживання -->
+            <div class="cab-grid">
+                <section class="card">
+                    <h2>Інформація про студента</h2>
+                    <h3 class="student-name">Марія Коваленко</h3>
+                    <p class="meta-lines">
+                        Факультет: Інформаційних технологій<br>
+                        Курс: 3 · Група: КН-31<br>
+                        Студентський квиток: ДЕМО-0241
+                    </p>
+                    <p class="meta-lines">
+                        Електронна пошта<br>
+                        m.kovalenko@example.com
+                    </p>
+                </section>
+
+                <section class="card card--pale">
+                    <h2>Проживання</h2>
+                    <p class="status-label">Активне проживання</p>
+                    <p class="meta-lines meta-lines--dark">
+                        Кімната: 308 · Поверх: 3<br>
+                        Гуртожиток №1 · двомісна кімната
+                    </p>
+                    <p class="meta-lines meta-lines--dark">
+                        Період: 01.09.2026 — 30.06.2027<br>
+                        Договір: № ДЕМО-308/26<br>
+                        від 01.09.2026
+                    </p>
+                </section>
+            </div>
+
+            <!-- Платежі -->
+            <section class="card" id="payments">
+                <h2>Платежі</h2>
+                <p class="debt">Борг: 0 ₴</p>
+                <p class="meta-lines">Місячна плата — 1 250 ₴. Наступна оплата за листопад: до 10.11.2026.</p>
+
+                <div class="table-wrap">
+                    <table class="pay-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Період</th>
+                                <th scope="col">Сума</th>
+                                <th scope="col">Дата / термін</th>
+                                <th scope="col">Статус</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Листопад 2026</th>
+                                <td><b>1 250 ₴</b></td>
+                                <td>до 10.11.2026</td>
+                                <td class="st st--wait">Очікується</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Жовтень 2026</th>
+                                <td><b>1 250 ₴</b></td>
+                                <td>03.10.2026</td>
+                                <td class="st st--ok">Сплачено</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Вересень 2026</th>
+                                <td><b>1 250 ₴</b></td>
+                                <td>02.09.2026</td>
+                                <td class="st st--ok">Сплачено</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <button type="button" class="btn-outline">Переглянути реквізити</button>
+            </section>
+
+            <!-- Документи + заявки -->
+            <div class="cab-grid">
+                <section class="card" id="documents">
+                    <h2>Документи</h2>
+                    <ul class="doc-list">
+                        <li>
+                            <div>
+                                <b>Договір проживання</b>
+                                <small>01.09.2026 · PDF · 240 КБ</small>
+                            </div>
+                            <a class="dl" href="#" aria-label="Завантажити: Договір проживання">
+                                <img src="../images/icons/download.svg">
+                            </a>
+                        </li>
+                        <li>
+                            <div>
+                                <b>Довідка про проживання</b>
+                                <small>01.09.2026 · PDF · 128 КБ</small>
+                            </div>
+                            <a class="dl" href="#" aria-label="Завантажити: Довідка про проживання">
+                                <img src="../images/icons/download.svg">
+                            </a>
+                        </li>
+                        <li>
+                            <div>
+                                <b>Квитанція за жовтень</b>
+                                <small>03.10.2026 · PDF · 96 КБ</small>
+                            </div>
+                            <a class="dl" href="#" aria-label="Завантажити: Квитанція за жовтень">
+                                <img src="../images/icons/download.svg">
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="card" id="requests">
+                    <h2>Мої заявки</h2>
+                    <ul class="req-list">
+                        <li>
+                            <b>Протікає кран на кухні</b>
+                            <small>№ 026 · 06.10.2026 · 3 поверх</small>
+                            <span class="st st--wait">У роботі</span>
+                        </li>
+                        <li>
+                            <b>Заміна лампи в кімнаті</b>
+                            <small>№ 019 · 28.09.2026 · кімната 308</small>
+                            <span class="st st--ok">Виконано</span>
+                        </li>
+                    </ul>
+                    <button type="button" class="btn">Створити заявку</button>
+                </section>
+            </div>
+
+            <!-- Сповіщення -->
+            <section class="card" id="notifications">
+                <h2>Сповіщення · 2 нові</h2>
+                <div class="notice-list">
+                    <article>
+                        <time datetime="2026-10-08">08.10.2026</time> · <span class="new">Нове</span>
+                        <h3>Перевірка опалення 12 жовтня</h3>
+                        <p>З 10:00 до 14:00 забезпечте доступ до радіаторів у кімнаті.</p>
+                    </article>
+                    <article>
+                        <time datetime="2026-10-06">06.10.2026</time> · <span class="new">Нове</span>
+                        <h3>Заявку № 026 прийнято</h3>
+                        <p>Майстер перевірить кран на кухні третього поверху.</p>
+                    </article>
+                    <article>
+                        <time datetime="2026-10-03">03.10.2026</time>
+                        <h3>Оплату за жовтень зараховано</h3>
+                        <p>1 250 ₴ отримано. Квитанцію можна завантажити вище.</p>
+                    </article>
+                </div>
+            </section>
+        </main>
+    </div>   
+<site-footer></site-footer>    
+</body>
+
+
+</html>

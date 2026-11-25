@@ -32,6 +32,7 @@
 .hero-kicker {
     display: flex;
     align-items: center;
+    color: var(--bleak-white);
     gap: 12px;
     margin: 0 0 16px;
     font-size: 12px;
@@ -48,9 +49,9 @@
     line-height: 112%;
 }
 .hero-content p:not(.hero-kicker) {
-    max-width: 520px;
+    max-width: 580px;
     margin-bottom: 28px;
-    font-size: clamp(15px, 1.4vw, 18px);
+    font-size: clamp(15px, 1.4vw, 16px);
 }
 .hero-content small {
     display: block;

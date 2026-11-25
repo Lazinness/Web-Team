@@ -1,0 +1,247 @@
+/*Контакти */
+.lead {
+    color: var(--text);
+}
+
+.section--tight {
+    padding-top: 0;
+}
+
+.dept-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+}
+
+.dept-card {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    background: #fff;
+    border: 1px solid var(--bleak-white);
+}
+
+.dept-card>img {
+    width: 24px;
+    height: 24px;
+}
+
+.dept-card h3 {
+    margin: 28px 0 12px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.dept-card p {
+    margin: 0;
+    font-size: 14px;
+    color: var(--text);
+}
+
+.dept-contacts {
+    margin: auto 0 0;
+    padding: 40px 0 0;
+    list-style: none;
+    font-size: 13px;
+    color: var(--text);
+}
+
+.dept-contacts li+li {
+    margin-top: 12px;
+}
+
+/* ---------- 02 Форма ---------- */
+.contact-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 0;
+}
+
+.field--full {
+    grid-column: 1 / -1;
+}
+
+.field label {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.field input,
+.field select,
+.field textarea {
+    width: 100%;
+    padding: 14px;
+    background: #fff;
+    border: 1px solid var(--bleak-white);
+    border-radius: 0;
+    font-size: 14px;
+    color: var(--dark-green);
+}
+
+.field input,
+.field select {
+    height: 48px;
+}
+
+.field textarea {
+    min-height: 136px;
+    resize: vertical;
+    line-height: 1.5;
+}
+
+.field ::placeholder {
+    color: var(--text);
+    opacity: 1;
+}
+
+.field select:invalid {
+    color: var(--text);
+}
+
+/* колір «placeholder» у select */
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+    outline: 2px solid var(--color-olive);
+    outline-offset: 0;
+    border-color: var(--color-olive);
+}
+
+.consent {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 12px;
+    line-height: 1.6;
+    color: var(--text);
+    cursor: pointer;
+}
+
+.consent input {
+    flex: none;
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    accent-color: var(--color-olive);
+}
+
+.form-note {
+    margin: 16px 0 0;
+    font-size: 12px;
+    line-height: 1.6;
+    color: var(--text);
+}
+
+/* ---------- 03 Карта ---------- */
+.map {
+    margin: 0;
+}
+
+.map img {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+}
+
+.map figcaption {
+    margin: 16px 0 24px;
+    font-size: 12px;
+    color: var(--text);
+}
+
+.map-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px 24px;
+    background: var(--bleak-white);
+}
+
+.map-note img {
+    flex: none;
+    width: 20px;
+    height: 20px;
+    margin-top: 2px;
+}
+
+.map-note p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/*Спільнота - над футером */
+.community {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: clamp(20px, 3vw, 48px);
+    padding: var(--section-y) var(--gutter) 24px;
+    background: var(--dark-green);
+    color: #fff;
+}
+
+.community-icon {
+    width: 48px;
+    height: 48px;
+}
+
+.community .section-label {
+    color: var(--bleak-white);
+}
+
+.community h2 {
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: clamp(32px, 5vw, 44px);
+}
+
+.community-text p {
+    max-width: 960px;
+    margin-bottom: 20px;
+    color: var(--bleak-white);
+}
+
+.community-text small {
+    font-size: 12px;
+    color: var(--mid-green);
+}
+
+@media (max-width: 860px) {
+    .community {
+        grid-template-columns: 1fr;
+        align-items: start;
+    }
+
+    .community-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .community .btn {
+        justify-self: start;
+    }
+}
+
+@media (max-width: 560px) {
+    .contact-form {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form .btn {
+        width: 100%;
+    }
+
+    .community .btn {
+        width: 100%;
+        justify-self: stretch;
+        text-align: center;
+    }
+}

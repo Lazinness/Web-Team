@@ -6,7 +6,7 @@ class SiteHeader extends HTMLElement {
     const links = [
       { id: 'home',      href: 'main.html',      text: 'Головна' },
       { id: 'residents', href: 'residents.html', text: 'Мешканцям' },
-      { id: 'cabinet',   href: 'cabinet.html',   text: 'Особистий кабінет' },
+      { id: 'cabinet',   href: 'personal.html',   text: 'Особистий кабінет' },
       { id: 'contacts',  href: 'contacts.html',  text: 'Контакти' },
     ];
 

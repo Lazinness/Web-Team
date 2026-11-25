@@ -1,0 +1,261 @@
+/*Мешканцям*/
+html {
+    scroll-behavior: smooth;
+}
+
+/* Компактний hero для внутрішніх сторінок */
+.intro-compact {
+    min-height: clamp(300px, 28vw, 400px);
+}
+
+.intro-compact h1 {
+    max-width: 540px;
+    font-size: clamp(36px, 5vw, 64px);
+}
+
+
+/* Швидкі посилання */
+.section-qlinks {
+    padding-bottom: 0;
+}
+
+.quick-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.quick-card {
+    display: block;
+    padding: 24px;
+    padding-bottom: 54px;
+    background: #fff;
+    border: 1px solid var(--bleak-white);
+    text-decoration: none;
+}
+
+.quick-card:hover {
+    border-color: var(--color-olive);
+}
+
+.quick-card svg,
+.note svg {
+    width: 24px;
+    height: 24px;
+    fill: none;
+    stroke: var(--color-olive);
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.quick-card h3 {
+    margin: 28px 0 6px;
+    font-size: 26px;
+}
+
+.quick-card p {
+    margin: 0;
+    font-size: 13px;
+    color: var(--text);
+}
+
+/* Дві колонки */
+.two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(32px, 5vw, 80px);
+    align-items: start;
+}
+.two-col h2 {
+    font-weight: bold;
+    font-size: 34px;
+}
+
+.lead {
+    color: #20261F;
+}
+
+/* Кроки (нумерація через CSS-лічильник) */
+.steps {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: step;
+}
+
+.steps li {
+    margin-bottom: 28px;
+    counter-increment: step;
+}
+
+.steps h3 {
+    margin-bottom: 6px;
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+.steps h3::before {
+    content: counter(step, decimal-leading-zero) " / ";
+}
+
+.steps p {
+    margin: 0;
+    font-size: 14px;
+    color: var(--text);
+}
+
+/* Інформаційна примітка */
+.note {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-top: 32px;
+    padding: 20px 24px;
+    background: var(--pale);
+}
+
+.note svg {
+    flex: none;
+    width: 20px;
+    height: 20px;
+    margin-top: 2px;
+}
+
+.note p {
+    margin: 0;
+    font-size: 14px;
+    color: var(--text);
+}
+
+/* Чек-ліст */
+.check-list {
+    margin: 0 0 28px;
+    padding: 0;
+    list-style: none;
+
+    color: #20261F;
+}
+
+.check-list li {
+    position: relative;
+    margin-bottom: 14px;
+    padding-left: 28px;
+    font-size: 14px;
+}
+
+.check-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--color-olive);
+}
+
+/* Правила */
+.rule {
+    margin-bottom: 20px;
+}
+
+.rule h3 {
+    margin-bottom: 4px;
+    font-family: var(--font-body);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.rule p {
+    margin: 0;
+    font-size: 14px;
+    color: var(--text);
+}
+
+/* FAQ (<details>) */
+.faq {
+    border-top: 1px solid var(--bleak-white);
+}
+#faq h2 {
+ font-weight: bold;
+    font-size: clamp(34px, 5vw, 46px);
+}
+
+.faq-item {
+    border-bottom: 1px solid var(--bleak-white);
+}
+
+.faq-item summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 24px;
+    font-weight: 500;
+    cursor: pointer;
+    list-style: none;
+    font-weight: bold;
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item summary::after {
+    content: "+";
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--color-olive);
+}
+
+.faq-item[open] {
+    background: var(--pale);
+}
+
+.faq-item[open] summary::after {
+    content: "−";
+}
+
+.faq-item p {
+    margin: 0;
+    padding: 0 24px 24px;
+    font-size: 14px;
+    color: var(--text);
+}
+
+.faq-more {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: 32px;
+}
+
+.faq-more p {
+    margin: 0;
+    font-size: 14px;
+    color: var(--text);
+}
+
+@media (max-width: 860px) {
+    .two-col {
+        grid-template-columns: 1fr;
+        gap: 56px;
+    }
+}
+
+@media (max-width: 560px) {
+    .faq-item summary {
+        padding: 16px;
+    }
+
+    .faq-item p {
+        padding: 0 16px 20px;
+    }
+
+    .faq-more .btn-outline {
+        width: 100%;
+        text-align: center;
+    }
+}

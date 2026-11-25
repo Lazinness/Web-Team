@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакти — Студентський гуртожиток №1</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <script src="../components/header.js" defer></script>
+    <script src="../components/footer.js" defer></script>
+</head>
+<body>
+    <site-header current="contacts"></site-header>
+
+    <main>
+        <!-- Hero -->
+        <section class="hero">
+            <div class="intro intro-compact">
+                <img src="../images/hero.png" alt="Фасад студентського гуртожитку №1">
+                <div class="hero-content">
+                    <p class="hero-kicker">Київ · Гуртожиток №1</p>
+                    <h1>Завжди<br>на зв’язку</h1>
+                    <p>
+                        Питання про проживання, документи чи побут? Знайдіть потрібний
+                        відділ або залиште повідомлення.
+                    </p>
+                </div>
+                <div class="gradient"></div>
+            </div>
+        </section>
+
+        <!-- 01 Відділи -->
+        <section class="section" id="departments">
+            <p class="section-label">01 / Кому написати</p>
+            <h2>Потрібний відділ — поруч</h2>
+            <p class="lead">Офіційні контактні дані та графік прийому буде опубліковано після уточнення.</p>
+
+            <div class="dept-grid">
+                <article class="dept-card">
+                    <img src="../images/icons/building.svg" alt="">
+                    <h3>Адміністрація</h3>
+                    <p>Заселення, виселення, договори та питання проживання.</p>
+                    <ul class="dept-contacts">
+                        <li>Телефон буде додано</li>
+                        <li>Email буде додано</li>
+                    </ul>
+                </article>
+                <article class="dept-card">
+                    <img src="../images/icons/receipt.svg" alt="">
+                    <h3>Бухгалтерія</h3>
+                    <p>Нарахування, реквізити, квитанції та звірка платежів.</p>
+                    <ul class="dept-contacts">
+                        <li>Телефон буде додано</li>
+                        <li>Email буде додано</li>
+                    </ul>
+                </article>
+                <article class="dept-card">
+                    <img src="../images/icons/wrench.svg" alt="">
+                    <h3>Технічна служба</h3>
+                    <p>Ремонт обладнання й побутові несправності.</p>
+                    <ul class="dept-contacts">
+                        <li>Телефон буде додано</li>
+                        <li>Email буде додано</li>
+                    </ul>
+                </article>
+                <article class="dept-card">
+                    <img src="../images/icons/shield.svg" alt="">
+                    <h3>Черговий</h3>
+                    <p>Доступ до будівлі, перепустки та термінові побутові питання.</p>
+                    <ul class="dept-contacts">
+                        <li>Телефон буде додано</li>
+                        <li>Email буде додано</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <!-- 02 Форма + 03 Карта -->
+        <section class="section section--tight">
+            <div class="two-col">
+                <div id="message">
+                    <p class="section-label">02 / Залиште повідомлення</p>
+                    <h2>Чим можемо допомогти?</h2>
+                    <p class="lead">Опишіть питання та залиште email для відповіді. Поля із зірочкою обов’язкові.</p>
+
+                    <form class="contact-form" action="#" method="post">
+                        <div class="field">
+                            <label for="name">Ваше ім’я *</label>
+                            <input id="name" name="name" type="text" placeholder="Введіть ім’я та прізвище" autocomplete="name" required>
+                        </div>
+                        <div class="field">
+                            <label for="email">Електронна пошта *</label>
+                            <input id="email" name="email" type="email" placeholder="Ваша електронна адреса" autocomplete="email" required>
+                        </div>
+                        <div class="field">
+                            <label for="topic">Тема звернення *</label>
+                            <select id="topic" name="topic" required>
+                                <option value="" disabled selected>Оберіть тему звернення</option>
+                                <option>Заселення та виселення</option>
+                                <option>Оплата та документи</option>
+                                <option>Технічна несправність</option>
+                                <option>Інше</option>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <label for="room">Номер кімнати</label>
+                            <input id="room" name="room" type="text" placeholder="Якщо ви мешканець">
+                        </div>
+                        <div class="field field--full">
+                            <label for="text">Повідомлення *</label>
+                            <textarea id="text" name="message" rows="4" placeholder="Розкажіть про ваше питання. Не додавайте паспортні дані чи іншу чутливу інформацію." required></textarea>
+                        </div>
+
+                        <label class="consent field--full">
+                            <input type="checkbox" name="consent" required>
+                            <span>Погоджуюся на обробку персональних даних для відповіді на моє звернення. Ознайомлений/-а з <a href="privacy.html">політикою конфіденційності</a>.</span>
+                        </label>
+
+                        <div class="field--full">
+                            <button type="submit" class="btn">Надіслати повідомлення</button>
+                            <p class="form-note">Для термінових побутових питань звертайтеся до чергового особисто. Форма не призначена для екстреної допомоги.</p>
+                        </div>
+                    </form>
+                </div>
+
+                <div id="map">
+                    <p class="section-label">03 / Як нас знайти</p>
+                    <h2>Гуртожиток у Києві</h2>
+                    <p class="lead">Київ · Адреса така-то</p>
+
+                    <figure class="map">
+                        <img src="../images/map.png" alt="Схематична карта розташування гуртожитку в Києві">
+                        <figcaption>Ми розташовані тут: адреса, будинок</figcaption>
+                    </figure>
+
+                    <div class="map-note">
+                        <img src="../images/icons/info-icon.svg" alt="">
+                        <p>Перед візитом уточніть точну адресу, маршрут і час прийому в адміністрації. Карта не призначена для навігації.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 04 Спільнота -->
+        <section class="community">
+            <img class="community-icon" src="../images/icons/chat.svg" alt="">
+            <div class="community-text">
+                <p class="section-label">04 / Спільнота</p>
+                <h2>Будьте в курсі життя дому</h2>
+                <p>Чат мешканців — для оголошень, побутових питань і взаємодопомоги. Запрошення надає адміністрація після підтвердження проживання.</p>
+                <small>Посилання на чат буде додано після підтвердження офіційного каналу.</small>
+            </div>
+            <a class="btn" href="#message">Запросити доступ</a>
+        </section>
+    </main>
+
+    <site-footer></site-footer>
+</body>
+</html>
