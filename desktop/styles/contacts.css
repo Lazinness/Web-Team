@@ -245,3 +245,18 @@
         text-align: center;
     }
 }
+
+
+/*  Стани форми (JS)  */
+/* помилка під чекбоксом — окремий елемент у grid-формі */
+.contact-form>.field-error {
+    grid-column: 1 / -1;
+    margin-top: -12px;
+}
+
+.form-success {
+    padding: 20px 24px;
+    background: var(--pale);
+    font-size: 14px;
+    line-height: 1.6;
+}
